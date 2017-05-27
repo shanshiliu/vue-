@@ -1,17 +1,17 @@
-# myproject
+# vueProject
 
-> A Vue.js project
+vue的综合项目
 
-## Build Setup
+## 项目步骤
 
 ``` bash
-# install dependencies
+# 安装项目依赖
 npm install
 
-# serve with hot reload at localhost:8080
+# 运行运行 localhost:8080
 npm run dev
 
-# build for production with minification
+# 项目发布
 npm run build
 
 # build for production and view the bundle analyzer report
