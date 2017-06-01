@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Hello from '@/components/Hello'
-import hi from '@/components/newcomponents'
+import newcomponents from '@/components/newcomponents'
 
 
 Vue.use(Router)
@@ -15,8 +15,8 @@ export default new Router({
     },
     {
       path: '/hi',
-      name: 'hi',
-      component: hi,
+      name: 'newcomponents',
+      component: newcomponents,
     },
   ]
 })
