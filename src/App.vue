@@ -1,46 +1,27 @@
 
 <template>
   <div id="app">
-    <!-- 使用mint-ui 做固定导航栏头部 -->
-    <mt-header fixed title="首页"></mt-header>
-    <div class="lbt">
-      <!-- mint-ui轮播图 -->
-      <mt-swipe :auto="4000">
-        <mt-swipe-item><img src="./assets/1.jpg"></mt-swipe-item>
-        <mt-swipe-item><img src="./assets/2.jpg"></mt-swipe-item>
-        <mt-swipe-item><img src="./assets/3.jpg"></mt-swipe-item>
-      </mt-swipe>
-    </div>
-    <div v-if="selected=='tab1'">
-      首页的内容
+    <div class="container">
       <router-view></router-view>
     </div>
-    <div v-if="selected=='tab2'">  
-    </div>
-    <div v-if="selected=='tab3'">
-      tab栏效果
-    </div>
-    <div v-if="selected=='tab4'">
-      
-    </div>
 
-    <!-- 导航栏 -->
+    <!-- 底部导航栏 -->
     <mt-tabbar v-model="selected">
       <mt-tab-item id="tab1">
         <img slot="icon" src="./assets/logo.png">
-        首页
+        <router-link to="/home">首页</router-link>
       </mt-tab-item>
       <mt-tab-item id="tab2">
         <img slot="icon" src="./assets/logo.png">
-        发现
+        <router-link to="/find">发现</router-link>
       </mt-tab-item>
       <mt-tab-item id="tab3">
         <img slot="icon" src="./assets/logo.png">
-        订单
+       <router-link to="/order">订单</router-link>
       </mt-tab-item>
       <mt-tab-item id="tab4">
         <img slot="icon" src="./assets/logo.png">
-        我的
+       <router-link to="/mine">我的</router-link>
       </mt-tab-item>
     </mt-tabbar>
   </div>
@@ -52,6 +33,7 @@ export default {
   data () {
     return {
       selected: '',
+      tab: '首页',
     }
   },
 }
@@ -78,11 +60,8 @@ body {
   line-height: 100px;
   font-size: 20px;
 }
-.lbt {
-  margin-top: 40px;
-  height: 300px;
-  width: 100%;
-  background-color: yellowgreen;
+.container {
+  /*margin-top: 40px;*/
 }
 .lbt img {
   width: 100%;
